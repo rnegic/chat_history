@@ -2,6 +2,7 @@ import React from "react";
 import Message from './Message';
 import Response from './Response';
 import Typing from './Typing';
+import './Messagehistory.scss';
 
 function MessageHistory({ list } = []) {
 
@@ -10,7 +11,7 @@ function MessageHistory({ list } = []) {
     }
 
     return (
-        <ul className="ul">
+        <ul className="messages">
             {list.map((message) => {
                 switch (message.type) {
                     case "message":
